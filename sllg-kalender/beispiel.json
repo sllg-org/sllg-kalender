@@ -1,0 +1,37 @@
+[
+  {
+    "titel": "Meditation",
+    "teaser": "",
+    "morelink": "http://atelier-burmehl.de/meditation/",
+    "kategorie": "1",
+    "termine": [
+      {
+        "datum": "2018-02-18",
+        "vonUhrzeit": "20:00",
+        "bisUhrzeit": "",
+        "bemerkung": ""
+      },
+      {
+        "datum": "2018-02-19",
+        "vonUhrzeit": "20:00",
+        "bisUhrzeit": "",
+        "bemerkung": ""
+      }
+    ]
+  },
+
+  {
+    "titel": "Kinderkurs",
+    "teaser": "4 - 6 Jahre: 15:00 - 16:30 Uhr<br>6 - 10 Jahre: 17:00 - 18:30",
+    "morelink": "http://atelier-burmehl.de/category/kurse-fuer-kinder/",
+    "kategorie": "5",
+    "termine": [
+      {
+        "datum": "2018-02-02",
+        "vonUhrzeit": "",
+        "bisUhrzeit": "",
+        "bemerkung": ""
+      }
+    ]
+  }
+]
