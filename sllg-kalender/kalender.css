@@ -1,4 +1,4 @@
-.et_pb_widget:has( >.veranstaltungskalender) {
+.et_pb_widget:has(.veranstaltungskalender) {
   overflow: none;
 }
 .veranstaltungskalender .kalenderKalender .monthnavi {
@@ -38,7 +38,8 @@
   border-bottom: solid 1px #c6c6c8;
   padding: 5px;
   width: 110px;
-  vertical-align: middle;
+	vertical-align: middle;
+	text-align: center;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td {
   padding: 5px;
@@ -47,6 +48,12 @@
   border-bottom: solid 1px #c6c6c8;
   border-right: solid 1px #c6c6c8;
   vertical-align: top;
+}
+.veranstaltungskalender .kalenderKalender .table table tr td:last-child {
+	border-right: solid 1px #c6c6c8;
+}
+.veranstaltungskalender .kalenderKalender .table table tr td:first-child {
+	border-left: solid 1px #c6c6c8;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td span {
   text-align: center;
@@ -132,9 +139,6 @@
 }
 .veranstaltungskalender .kalenderKalender .table table tr td.offset {
   background-color: transparent;
-}
-.veranstaltungskalender .kalenderKalender .table table tr td:last-child {
-  border-right: none;
 }
 /*
 @media (max-width: @screen-md) {

@@ -58,7 +58,7 @@ class sllgkalender_widget extends WP_Widget {
             echo $args['before_title'] . $title . $args['after_title'];
 		}
         if (! empty( $text )) {
-            echo '<script>var termine = [' . $text . '];</script>';
+            echo '<script>var veranstaltungen = ' . $text . ';</script>';
 		}
         // This is where you run the code and display the output
         echo __( '
