@@ -5,16 +5,23 @@
     // veranstaltungen in widget
     //"2014-05-15 09:15"
     /*
-        var termine = [{
+        var veranstaltungen = [
+          {
             titel: 'Titel1',
             teaser: 'Teaser 1',
-            morelink: 'http://sllg.org',
+            morelink: 'http://example.org',
             kategorie: '2',
-            datum: '2017-06-15',
-            vonUhrzeit: '17:00',
-            bisUhrzeit: '19:00'
-        }];
-        */
+            "termine": [
+              {
+                "datum": "2017-04-21",
+                "vonUhrzeit": "10:00",
+                "bisUhrzeit": "18:00",
+                "bemerkung": ""
+              }
+            ]
+          }
+        ];
+    */
 
     // nach data-attibute filtern
     $.fn.filterByData = function(prop, val) {
@@ -39,7 +46,6 @@
         }
       }
     }
-    console.log("letzterTermin: ", letzterTermin);
     // kalender erzeugen
     var heute = new Date();
     var aktMonat = heute.getMonth() + 1;
@@ -128,16 +134,6 @@
 
         //??? Veranstaltungen ueber mehrere Tage, Monatsuebergang, Jahresuebergang ?
 
-        /*
-            // normalize und add kategorien to select
-            var katArray = kategorien.split(',');
-            for (var j = 0; j < katArray.length; j++) {
-                //var kategorieFilter = katArray[j].trim();
-                var kategorieFilter = $.trim(katArray[j]);
-                kategorieFilters[kategorieFilter] = 1;
-            }
-            */
-
         // veranstaltungen eintragen
         var cell = $(
           "#kK" + jahr + "" + (monat < 10 ? "0" : "") + monat + " .d" + tag
@@ -170,33 +166,6 @@
       .parent()
       .css("overflow", "visible");
 
-    /*
-        // kategorienFilter eintragen
-        if (kategorieFilters.length < 2) {
-            $('.dropdown.kategorien').hide();
-        } else {
-            $('.dropdown.kategorien .dropdown-menu').append('<li><a href="javascript:" data-value="alle">Alle</a></li>');
-            for (var index in kategorieFilters) {
-                $('.dropdown.kategorien .dropdown-menu').append('<li><a href="javascript:" data-value="' + index + '">' + index + '</a></li>');
-            }
-        }
-
-        
-        $('.dropdown.kategorien').on('click', 'a', function (e) {
-
-            e.preventDefault();
-            var val = $(this).attr('data-value');
-            $('.dropdown.kategorien #dLabel').attr('data-value', val);
-            $('.dropdown.kategorien #dLabel .text').text($(this).text());
-            toggleKategorie(val);
-        });
-        
-        if($.cookie('ansicht') == 'list') {
-            kalenderListe();
-            $('.btn.btn-small').filterByData('view','list').addClass('active');
-            $('.btn.btn-small').filterByData('view','cal').removeClass('active');
-        }
-        */
 
     // event handler
 
@@ -239,9 +208,6 @@
 
       $(".veranstaltungsHeader .btn-group .btn").removeClass("active");
       btn.addClass("active");
-
-      // if (btn.attr('data-view') == 'list') kalenderListe();
-      // else kalenderAnsicht();
     });
 
     $(".veranstaltungskalender").on("touchend", ".day span", function(e) {
@@ -381,34 +347,5 @@
       var a = datum.split("-");
       return new Date(a[0], Number(a[1]) - 1, a[2], 12, 0);
     }
-
-    /*
-        function kalenderAnsicht() {
-            $('.kalenderAnsicht').show();
-            $('.kalenderListe').hide();
-            //$.cookie('ansicht', 'cal');
-        }
-
-        function kalenderListe() {
-            $('.kalenderAnsicht').hide();
-            $('.kalenderListe').show();
-            //$.cookie('ansicht', 'list');
-        }
-        
-        function toggleKategorie(val) {
-            if (val == 'alle') {
-                $('.terminKalenderKategorie').show().find('.terminKalenderPopup').removeClass('hidden');
-                $('.article.articletype-0').show();
-            } else {
-                $('.terminKalenderKategorie').hide().find('.terminKalenderPopup').addClass('hidden');
-                $('.terminKalenderKategorie').filterByData('kategorie', val).show().find('.terminKalenderPopup').removeClass('hidden');
-                $('.article.articletype-0').hide();
-                $('.article.articletype-0').filterByData('kategorie', val).show();
-            }
-            $('.kalenderAnsicht .day').removeClass('has').removeClass('active');
-            $('.kalenderAnsicht .day').has('.terminKalenderPopup:not(.hidden)').addClass('has');
-            $('.kalenderAnsicht .terminDetail').html('');
-        }
-        */
   });
 })(jQuery);

@@ -1,50 +1,22 @@
 [
-    {
-      "titel": "Meditation",
-      "teaser": "",
-      "morelink": "/meditation/",
-      "kategorie": "1",
-      "termine": [
-        {
-          "datum": "2018-02-18",
-          "vonUhrzeit": "20:00",
-          "bisUhrzeit": "",
-          "bemerkung": ""
-        },
-        {
-          "datum": "2018-02-19",
-          "vonUhrzeit": "20:00",
-          "bisUhrzeit": "",
-          "bemerkung": ""
-        }
-      ]
-    },
-    {
-      "titel": "Malerei und Selbstausdruck",
-      "teaser": "",
-      "morelink": "/wochenendkurs-malerei-selbstausdruck/",
-      "kategorie": "3",
-      "termine": [
-        {
-          "datum": "2017-09-03",
-          "vonUhrzeit": "10:00",
-          "bisUhrzeit": "17:00",
-          "bemerkung": ""
-        }
-      ]
-    },
-    {
-      "titel": "Kinderkurs",
-      "teaser": "4 - 6 Jahre: 15:00 - 16:30 Uhr<br>6 - 10 Jahre: 17:00 - 18:30",
-      "morelink": "/category/kurse-fuer-kinder/",
-      "kategorie": "5",
-      "termine": [
-        {
-          "datum": "2017-08-24",
-          "vonUhrzeit": "",
-          "bisUhrzeit": "",
-          "bemerkung": ""
-        }
-      ]
-    }
+  {
+    "titel": "Malerei und Selbstausdruck",
+    "teaser": "",
+    "morelink": "/wochenendkurs-malerei-selbstausdruck/",
+    "kategorie": "3",
+    "termine": [
+      {
+        "datum": "2017-04-21",
+        "vonUhrzeit": "10:00",
+        "bisUhrzeit": "18:00",
+        "bemerkung": ""
+      },
+      {
+        "datum": "2017-04-22",
+        "vonUhrzeit": "10:00",
+        "bisUhrzeit": "17:00",
+        "bemerkung": ""
+      }
+    ]
+  }
   ]

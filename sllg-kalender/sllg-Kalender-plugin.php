@@ -3,8 +3,8 @@
 Plugin Name: Kalender Atelier Burmehl
 Plugin URI: https://github.com/LutzGausW/sllg-kalender
 Description: Anzeige Veranstaltungskalender
-Version: 0.9
-Author: Lutz Gerlinger
+Version: 1.0
+Author: Lutz Gerlinger, Dank an Volker
 Author URI: https://lutz.sllg.org
 License: GPL2 
 */
