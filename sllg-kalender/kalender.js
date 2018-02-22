@@ -3,7 +3,6 @@
 
   $(document).ready(function() {
     // veranstaltungen in widget
-    //"2014-05-15 09:15"
     /*
         var veranstaltungen = [
           {
@@ -87,7 +86,6 @@
     }
 
     // veranstaltungen eintragen
-
     var wochentage = [
       "Sonntag",
       "Montag",
