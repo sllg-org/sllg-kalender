@@ -64,7 +64,7 @@ class sllgkalender_widget extends WP_Widget {
         echo __( '
 			<div class="veranstaltungskalender">
 				<div class="kalenderAnsicht">
-					<div class="terminDetail"></div>
+					
 				</div>
   			</div>
 		', 'sllgkalender_widget_domain' );

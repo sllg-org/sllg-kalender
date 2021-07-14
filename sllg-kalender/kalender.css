@@ -31,7 +31,7 @@
 }
 
 .veranstaltungskalender .kalenderKalender .table table {
-  width: 100%;
+  width: auto;
 }
 .veranstaltungskalender .kalenderKalender .table table tr th {
   border-top: solid 1px white;

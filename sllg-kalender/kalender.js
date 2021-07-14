@@ -136,7 +136,8 @@
         var cell = $(
           "#kK" + jahr + "" + (monat < 10 ? "0" : "") + monat + " .d" + tag
         );
-        cell.append(
+        //cell.append(
+          $(".kalenderAnsicht .terminDetail").append(
           '<div class="terminKalenderKategorie" data-kategorie="' +
             kategorie +
             '">' +
@@ -194,7 +195,7 @@
         sheet.hide();
         show.show();
         $(".kalenderAnsicht .day").removeClass("active");
-        $(".kalenderAnsicht .terminDetail").html("");
+        //$(".kalenderAnsicht .terminDetail").html("");
       }
     });
 
@@ -292,7 +293,8 @@
           '</span><span class="vor">&rarr;</span>'
       );
       $("#" + kalenderDiv).append(
-        '<div class="table"><table><tr><th>Mo</th><th>Di</th><th>Mi</th><th>Do</th><th>Fr</th><th class="wochenende">Sa</th><th class="wochenende">So</th></tr></table></div>'
+        '<div class="table"><table><tr><th>Mo</th><th>Di</th><th>Mi</th><th>Do</th><th>Fr</th><th class="wochenende">Sa</th><th class="wochenende">So</th></tr></table></div>'+
+        '<div class="terminDetail"></div>'
       );
 
       // verstecke den nicht aktuellen
