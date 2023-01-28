@@ -85,15 +85,16 @@
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie {
   margin-bottom: 4px;
-}
-.kalenderAnsicht .terminDetail div {
-	padding: 0 5px;
-	display: none;
+  cursor: pointer;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie:last-child {
   margin-bottom: 0;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td.offset {
   background-color: transparent;
+}
+.veranstaltungskalender .terminDetail div {
+	padding: 0 5px;
+	display: none;
 }
 

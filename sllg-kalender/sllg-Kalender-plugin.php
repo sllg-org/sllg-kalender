@@ -66,6 +66,7 @@ class sllgkalender_widget extends WP_Widget {
 				<div class="kalenderAnsicht">
 					
 				</div>
+                <div class="terminDetail"></div>
   			</div>
 		', 'sllgkalender_widget_domain' );
         echo $args['after_widget'];

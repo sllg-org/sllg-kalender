@@ -140,7 +140,7 @@
         );
 
         //cell.append(
-          $(".kalenderAnsicht .terminDetail").append(
+          $(".veranstaltungskalender .terminDetail").append(
           '<div data-day="'+ jahrMonat + tag +'">' +
             dateStr +
             "<br>" +
@@ -150,9 +150,9 @@
             "</div>"
         );
         cell.addClass("has terminKalenderKategorie kategorie-" + kategorie);
-        cell.mouseover(function(){
-          $(".kalenderAnsicht .terminDetail div").hide();
-          $(".kalenderAnsicht .terminDetail div[data-day="+ $(this).data('day') +"]").show('fast');
+        cell.click(function(){
+          $(".veranstaltungskalender .terminDetail div").hide();
+          $(".veranstaltungskalender .terminDetail div[data-day="+ $(this).data('day') +"]").show('fast');
         });
       }
     }
@@ -167,7 +167,7 @@
 
     // handler fuer vor- und folgemonat
     $(".vor, .zurueck").bind("click", function(e) {
-      $(".kalenderAnsicht .terminDetail div").hide();
+      $(".veranstaltungskalender .terminDetail div").hide();
       var sheet = $(this)
         .parent()
         .parent();
@@ -257,8 +257,7 @@
           '</span><span class="vor">&rarr;</span>'
       );
       $("#" + kalenderDiv).append(
-        '<div class="table"><table><tr><th>Mo</th><th>Di</th><th>Mi</th><th>Do</th><th>Fr</th><th class="wochenende">Sa</th><th class="wochenende">So</th></tr></table></div>'+
-        '<div class="terminDetail"></div>'
+        '<div class="table"><table><tr><th>Mo</th><th>Di</th><th>Mi</th><th>Do</th><th>Fr</th><th class="wochenende">Sa</th><th class="wochenende">So</th></tr></table></div>'
       );
 
       // verstecke den nicht aktuellen
