@@ -60,184 +60,40 @@
   display: block;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .kategorie-1 span {
-  /* border-top: 2px solid red; */
   color: #dd3333;
   font-weight: bold;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .kategorie-2 span {
-  /* border-top: 2px solid blue; */
   color: #8e6ecf;
   font-weight: bold;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .kategorie-3 span {
-  /* border-top: 2px solid blue; */
   color: #78bac8;
   font-weight: bold;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .kategorie-4 span {
-  /* border-top: 2px solid blue; */
   color: #bfb9b3;
   font-weight: bold;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .kategorie-5 span {
-  /* border-top: 2px solid blue; */
   color: #dd9933;
   font-weight: bold;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .kategorie-6 span {
-  /* border-top: 2px solid blue; */
   color: #8e6ecf;
   font-weight: bold;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie {
   margin-bottom: 4px;
 }
-.veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie .terminKalenderText a {
-  display: block;
-  color: #ffffff;
-  padding: 3px 5px;
-  font-size: 13px;
-  line-height: 13px;
-}
-.veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie .anchor {
-  position: relative;
-  height: 0;
-}
-.veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie .anchor .terminKalenderPopup {
-  display: none;
-  position: absolute;
-  top: 0px;
-  left: auto;
-  right: 0;
-  z-index: 99;
-  width: 266px;
-  border: solid 1px #d5d7d9;
-  padding: 5px;
-  opacity: 0;
-  background-color: white;
-}
-.veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie .anchor .terminKalenderPopup .terminKalenderTitel {
-  font-size: 20px;
-  margin: 4px 0 8px;
-}
-.veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie .anchor .terminKalenderPopup .terminKalenderTeaser p {
-  margin-bottom: 5px;
+.kalenderAnsicht .terminDetail div {
+	padding: 0 5px;
+	display: none;
 }
 .veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie:last-child {
   margin-bottom: 0;
 }
-.veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie:hover .terminKalenderText a {
-  background-color: black;
-}
-.veranstaltungskalender .kalenderKalender .table table tr td .terminKalenderKategorie:hover .anchor .terminKalenderPopup {
-  display: block;
-  opacity: 1;
-}
-.veranstaltungskalender .kalenderKalender .table table tr td .day.right .terminKalenderKategorie .anchor .terminKalenderPopup {
-  right: 0;
-  left: auto;
-}
 .veranstaltungskalender .kalenderKalender .table table tr td.offset {
   background-color: transparent;
 }
-/*
-@media (max-width: @screen-md) {
-	.veranstaltungskalender {
-		padding: 0 10px 32px;
-		.veranstaltungsHeader {
-			height: 80px;
-			.btn-group {
-				margin-top: 10px;
-			}
-			.dropdown {
-				margin-right: 0;
-				float: right;
-				#dLabel {
-					width: 195px;
-				}
-			}
-		}
-		.kalenderAnsicht {
-			.terminDetail {
-				margin-top: 3px;
-				.terminKalenderPopup {
-					margin-bottom: 24px;
-					.terminKalenderDate {
-						font-size: 16px;
-						font-weight: @font-vialog-light;
-						margin-bottom: 6px;
-					}
-					.terminKalenderTitel {
-						font-size: 20px;
-						line-height: 22px;
-						font-weight: @font-vialog-medium;
-						text-align: left;
-						margin-bottom: 10px;
-					}
-					.terminKalenderTeaser {
-						p {
-							margin-bottom: 4px;
-						}
-					}
-				}
-				.terminKalenderPopup:last-child {
-					margin-bottom: 0px;
-				}
-			}
-		}
-		.kalenderKalender {
-			.monthnavi {
-				span {
-					overflow: hidden;
-					width: 10%;
-				}
-				.zurueck {
-					text-indent: -99999px;
-					margin: 0;
-				}
-				.vor {
-					text-indent: 99999px;
-					margin: 0;
-				}
-				h3 {
-					width: 80%;
-				}
-			}
-			.table {
-				table {
-					tr {
-						th {
-							width: auto;
-							padding: 8px;
-							text-align: center;
-						}
-						td {
-							padding: 4px;
-							height: 38px;
-							text-align: center;
-							span {
-								padding: 5px;
-							}
-							.terminKalenderKategorie {
-								display: none !important;
-							}
-						}
-						td .day.has {
-							span {
-								background-color: #cecfd0;
-							}
-						}
-						td .day.has.active {
-							span {
-								background-color: @text-color;
-								color: white;
-								text-shadow: none;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-*/
+

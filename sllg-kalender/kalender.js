@@ -133,30 +133,27 @@
         //??? Veranstaltungen ueber mehrere Tage, Monatsuebergang, Jahresuebergang ?
 
         // veranstaltungen eintragen
+        var jahrMonat = jahr + (monat < 10 ? "0" : "") + monat;
+        
         var cell = $(
-          "#kK" + jahr + "" + (monat < 10 ? "0" : "") + monat + " .d" + tag
+          "#kK" + jahrMonat + " table div[data-day=" + jahrMonat + tag +"]"
         );
+
         //cell.append(
           $(".kalenderAnsicht .terminDetail").append(
-          '<div class="terminKalenderKategorie" data-kategorie="' +
-            kategorie +
-            '">' +
-            '<div class="anchor">' +
-            '<div class="terminKalenderPopup">' +
-            '<div class="terminKalenderDate">' +
+          '<div data-day="'+ jahrMonat + tag +'">' +
             dateStr +
-            "</div>" +
-            '<div class="terminKalenderTitel"><a href="' +
-            morelink +
-            '">' +
-            titel +
-            "</a></div>" +
-            '<div class="terminKalenderTeaser">' +
+            "<br>" +
+            '<a href="' + morelink + '">' + titel + "</a>" +
+            '<br>' +
             teaser +
-            "</div>" +
-            "</div></div></div>"
+            "</div>"
         );
         cell.addClass("has terminKalenderKategorie kategorie-" + kategorie);
+        cell.mouseover(function(){
+          $(".kalenderAnsicht .terminDetail div").hide();
+          $(".kalenderAnsicht .terminDetail div[data-day="+ $(this).data('day') +"]").show('fast');
+        });
       }
     }
 
@@ -170,6 +167,7 @@
 
     // handler fuer vor- und folgemonat
     $(".vor, .zurueck").bind("click", function(e) {
+      $(".kalenderAnsicht .terminDetail div").hide();
       var sheet = $(this)
         .parent()
         .parent();
@@ -195,43 +193,9 @@
         sheet.hide();
         show.show();
         $(".kalenderAnsicht .day").removeClass("active");
-        //$(".kalenderAnsicht .terminDetail").html("");
       }
     });
 
-    //
-    $(".veranstaltungsHeader .btn-group").on("click", ".btn", function(e) {
-      e.preventDefault();
-      var btn = $(this);
-      if (btn.hasClass("active")) return;
-
-      $(".veranstaltungsHeader .btn-group .btn").removeClass("active");
-      btn.addClass("active");
-    });
-
-    $(".veranstaltungskalender").on("touchend", ".day span", function(e) {
-      if (!isMobile) return;
-
-      $(".veranstaltungskalender .day").removeClass("active");
-
-      var day = $(this).closest(".day");
-      day.addClass("active");
-
-      $(".kalenderAnsicht .terminDetail").html(
-        day
-          .find(".terminKalenderPopup")
-          .not(".hidden")
-          .clone()
-      );
-
-      var sheet = $(this).closest(".kalenderKalender");
-      var calTop = sheet.offset().top - 20;
-      var scrollTop = $("body").scrollTop();
-
-      if (calTop > scrollTop) {
-        $("body").scrollTop(calTop);
-      }
-    });
 
     // ----- kalender HTML erzeugen -------------------------------------------------------------------------------------
     function createMonat(datum) {
@@ -317,9 +281,9 @@
         var right =
           (i + offset) % 7 > 4 || (i + offset) % 7 == 0 ? " right" : "";
         zeile +=
-          '<td><div class="day d' +
-          i +
-          right +
+          '<td><div ' +
+          'class="day' + right + '" ' +
+          'data-day="' + aktJahr + (aktMonat < 10 ? "0" : "") + aktMonat + i +
           '"><span>' +
           i +
           "</span></div></td>";
